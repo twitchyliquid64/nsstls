@@ -14,6 +14,7 @@ function clean
 function install
 {
   export wd=`pwd`
+  sudo rm /lib/libnss_tls.so.2
   sudo cp libnss_tls.so /lib/libnss_tls.so.2
   cd /lib
   sudo install -m 0644 libnss_tls.so.2 /lib
